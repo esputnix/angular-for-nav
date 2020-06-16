@@ -6,7 +6,7 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  menus = ["Menu 1", "Menu 2", "Menu 3"];
+  menuName = ["Name 1", "Name 2", "Name 3"];
 
   onNavClick() {
     console.log("app-navigation.onNavClick");
