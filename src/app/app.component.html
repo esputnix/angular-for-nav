@@ -1,10 +1,36 @@
-<nav> 
-<p></p>
-<a routerLink="/hello">Hello Component</a>  
-<p></p>
-<a routerLink="/product/1">Product 1 Component</a>
-<p></p>
-<a routerLink="/product/2">Product 2 Component</a>
-<p></p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand logo" href="#">Title</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onNavClick()" >Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onNavClick()" >Files</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onNavClick()" >Directory</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onNavClick()" >Harmony</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onNavClick()" >Dashboard</a>
+      </li>
+    </ul>
+
+    <li class="nav-item" *ngFor="let name of menus">
+        <a class="nav-link" >{{name}}</a>
+    </li>
+
+
+
+  </div>
 </nav>
-<router-outlet></router-outlet>
